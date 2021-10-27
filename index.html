@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-    <link rel="icon" href="img/icon.png">
+    <link rel="icon" href="img/icon.png" />
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -66,7 +66,10 @@
         </div>
         <div class="row justify-content-center fs-5">
           <div class="col-md-5 mb-3">
-            <p style="text-align: justify;">Saya adalah seorang lulusan S1 Teknik Informatika, saya sangat menyukai bidang IT dan pemrograman. Saya suka mempelajari sesuatu yang baru terutama tentang IT dan Pemrograman. Saya memiliki skill dasar HTML, CSS, PHP, dan Javascript.</p>
+            <p style="text-align: justify;">
+              Saya adalah seorang lulusan S1 Teknik Informatika, saya sangat menyukai bidang IT dan pemrograman. Saya suka mempelajari sesuatu yang baru terutama tentang IT dan Pemrograman. Saya memiliki skill dasar HTML, CSS, PHP, dan
+              Javascript.
+            </p>
           </div>
         </div>
       </div>
@@ -154,11 +157,11 @@
             <form name="contact-form">
               <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
-                <input name="nama" type="text" class="form-control" id="nama"/>
+                <input name="nama" type="text" class="form-control" id="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input name="email" type="email" class="form-control" id="email"/>
+                <input name="email" type="email" class="form-control" id="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
@@ -188,26 +191,26 @@
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyWjbNaa39q3mg769JBKuk9AgLkAf8YP0QPcgWO01J0EY2uomo3d4AcLVyXWiPlnCs/exec'
-      const form = document.forms['contact-form']
-      const btnKirim = document.querySelector('.btn-kirim')
-      const btnLoading = document.querySelector('.btn-loading')
-      const alert = document.querySelector('.my-alert')
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyWjbNaa39q3mg769JBKuk9AgLkAf8YP0QPcgWO01J0EY2uomo3d4AcLVyXWiPlnCs/exec";
+      const form = document.forms["contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".my-alert");
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        btnLoading.classList.toggle('d-none')
-        btnKirim.classList.toggle('d-none')
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            btnLoading.classList.toggle('d-none')
-            btnKirim.classList.toggle('d-none')
-            alert.classList.toggle('d-none')
-            form.reset()
-            console.log('Success!', response)
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            alert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
           })
-          .catch(error => console.error('Error!', error.message))
-      })
-</script>
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
